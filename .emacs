@@ -8,15 +8,12 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;;
 
-;;;; Set theme
-;(setq solarized-use-less-bold t)
-;(setq solarized-scale-org-headlines nil)
-;(load-theme `solarized t)
-
 ;;;; Inhibit startup screen
 (setq inhibit-startup-screen t)
 
 ;;;; GUI settings
+;;;; Inhibit startup screen
+(setq inhibit-startup-screen t)
 ;;; Show column number
 (setq column-number-mode t)
 ;;; Hide toolbar
@@ -33,8 +30,8 @@
 ;;; Sensible tab indentation
 (smart-tabs-insinuate 'c 'c++)
 ;;; C comment options
-(setq-default c-default-style "k&r" c-basic-offset 4)
-(setq-default tab-width 4)
+(setq-default c-default-style "k&r"); c-basic-offset 4)
+;(setq-default tab-width 4)
 (add-hook `c-mode-common-hook `flyspell-prog-mode)
 (c-set-offset `comment-intro 0)
 ;;; enable hideshow mode
@@ -55,6 +52,8 @@
 (setq TeX-parse-self t)
 (setq latex-run-command "pdflatex")
 (setq-default TeX-master nil)
+;; electric math
+(setq TeX-electric-math (cons "$" "$"))
 ;; Start flyspell automatically when using auctex
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 ; Should these be ' rather than `?
@@ -87,6 +86,10 @@
 ;;;; Magit settings
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;;;; Python options
+(require 'python)
+(add-hook 'python-mode-hook 'flyspell-prog-mode)
+
 ;;;; Auto fill mode
 ;;;   Enters new lines at 70 characters
 ;;;   Number of characters in a line is controlled with the variable
@@ -99,6 +102,10 @@
 (defun comment-auto-fill ()
   (setq-local comment-auto-fill-only-comments t)
   (auto-fill-mode 1))
+
+;;;; Open imagej files in java mode
+(add-to-list 'auto-mode-alist '("\\.ijm\\'" . java-mode))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -153,6 +160,7 @@
    (quote
 	("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(inhibit-startup-screen t)
+ '(indent-tabs-mode nil)
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
  '(magit-diff-use-overlays nil)
