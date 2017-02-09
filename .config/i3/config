@@ -48,6 +48,7 @@ floating_modifier $mod
 # Use gnome-terminal for the moment
 bindsym $mod+Return exec gnome-terminal
 
+
 # start firefox
 bindsym $mod+BackSpace exec firefox
 # Start thunderbird
