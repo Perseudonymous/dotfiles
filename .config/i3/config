@@ -44,7 +44,9 @@ floating_modifier $mod
 #bindsym $mod+Return exec i3-sensible-terminal
 # Bind xfce4-terminal for the moment, as I need to configure xterm if
 #I am going to use that or decide to use something else and configure it.
-bindsym $mod+Return exec xfce4-terminal
+#bindsym $mod+Return exec xfce4-terminal
+# Use gnome-terminal for the moment
+bindsym $mod+Return exec gnome-terminal
 
 # start firefox
 bindsym $mod+BackSpace exec firefox
