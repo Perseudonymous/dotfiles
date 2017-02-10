@@ -85,10 +85,13 @@
 
 ;;;; Magit settings
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
 ;;;; Python options
 (require 'python)
 (add-hook 'python-mode-hook 'flyspell-prog-mode)
+(setq python-indent-offset 4)
+(add-hook `python-mode-hook `comment-auto-fill)
 
 ;;;; Auto fill mode
 ;;;   Enters new lines at 70 characters
