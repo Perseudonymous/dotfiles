@@ -174,11 +174,7 @@
  '(org-list-empty-line-terminates-plain-lists t)
  '(package-selected-packages
    (quote
-<<<<<<< HEAD
-    (linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein zenburn-theme smart-tabs-mode magit auctex)))
-=======
     (fish-mode linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein zenburn-theme smart-tabs-mode magit auctex)))
->>>>>>> ace520645f5dd6f26b355a1a6e6308606bdea8dd
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
@@ -221,9 +217,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-<<<<<<< HEAD
  '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
-=======
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "1ASC" :family "Droid Sans Mono"))))
->>>>>>> ace520645f5dd6f26b355a1a6e6308606bdea8dd
  '(linum-relative-current-face ((t (:inherit linum :foreground "#93a1a1" :weight bold)))))
