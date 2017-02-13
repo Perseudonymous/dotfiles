@@ -57,7 +57,7 @@ bindsym $mod+BackSpace exec firefox
 # Start thunderbird
 bindsym $mod+t exec thunderbird
 # Start emacsclient
-bindsym $mod+c exec emacsclient -c
+bindsym $mod+c exec emc
 
 # change volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+ unmute
