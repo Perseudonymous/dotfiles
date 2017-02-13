@@ -138,6 +138,7 @@
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "4e753673a37c71b07e3026be75dc6af3efbac5ce335f3707b7d6a110ecb636a3" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(fci-rule-color "#383838")
+ '(fill-column 80)
  '(frame-background-mode (quote dark))
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
@@ -173,11 +174,16 @@
  '(org-list-empty-line-terminates-plain-lists t)
  '(package-selected-packages
    (quote
+<<<<<<< HEAD
+    (linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein zenburn-theme smart-tabs-mode magit auctex)))
+=======
     (fish-mode linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein zenburn-theme smart-tabs-mode magit auctex)))
+>>>>>>> ace520645f5dd6f26b355a1a6e6308606bdea8dd
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
+ '(tab-width 4)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
  '(vc-annotate-background "#2B2B2B")
@@ -215,5 +221,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+<<<<<<< HEAD
+ '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
+=======
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "1ASC" :family "Droid Sans Mono"))))
+>>>>>>> ace520645f5dd6f26b355a1a6e6308606bdea8dd
  '(linum-relative-current-face ((t (:inherit linum :foreground "#93a1a1" :weight bold)))))
