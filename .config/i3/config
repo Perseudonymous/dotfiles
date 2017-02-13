@@ -31,7 +31,7 @@ exec_always --no-startup-id nm_applet
 #exec --no-startup-id setxkbmap -layout gb -option ctrl:nocaps
 exec /usr/bin/dropbox
 exec --no-startup-id emacs --daemon
-hide_edge_borders both
+hide_edge_borders vertical
 #exec xinput -disable 10
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 exec xset -b
@@ -41,6 +41,8 @@ exec --no-startup-id feh --randomize --bg-scale Pictures/Wallpapers/*
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+# Make imagej windows float by default
+for_window [class="fiji-Main"] floating enable
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -196,34 +198,25 @@ bar {
 		tray_output LVDS1
 #		font pango:FontAwesome 8
 		colors {
-			   # Use solarized colours
-			   # base03
-				background #002b36
-			   # base0 (primary content / Body text)
-				statusline #eee8d5
-				#statusline #fdf6e3
-			   # base01 (secondary content)
-				separator  #586e75
-			   # focused workspace
-			   #                  border, background, text color
-			   #                  base1   base03 (bg highlights) base0
-			   #focused_workspace  #93a1a1 #002b36 #839496
-			   #                  base01  base03  base01
-			   #active_workspace   #073642 #002b36 #586e75
-			   #                  base02  base03  base01
-			   #inactive_workspace #586e75 #002b36 #586e75
-			   #
-			   #urgent_workspace   #dc322f #dc322f #fdf6e3
+                       # Use solarized colours
+                       # base03
+                       background #002b36
+                       # base0 (primary content / Body text)
+                       statusline #eee8d5
+                       #statusline #fdf6e3
+                       # base01 (secondary content)
+                       separator  #586e75
 
+                       #                 border, background, text color
 
-			   focused_workspace  #586e75 #268bd2 #002b36
-               active_workspace   #586e75 #586e75 #002b36
-               inactive_workspace #586e75 #002b36 #839496
-               urgent_workspace   #dc322f #dc322f #fdf6e3
+                       focused_workspace  #586e75 #268bd2 #002b36
+                       active_workspace   #586e75 #586e75 #002b36
+                       inactive_workspace #586e75 #002b36 #839496
+                       urgent_workspace   #dc322f #dc322f #fdf6e3
 		}
 }
 
- client.focused          #002b36 #586e75 #fdf6e3 #268bd2
+client.focused          #002b36 #586e75 #fdf6e3 #268bd2
 client.focused_inactive #002b36 #073642 #839496 #073642
 client.unfocused        #002b36 #073642 #839496 #073642
 client.urgent           #002b36 #dc322f #fdf6e3 #002b36
