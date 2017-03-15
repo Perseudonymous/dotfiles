@@ -43,9 +43,7 @@
 
 ;;;; Python options
 (require 'python)
-(add-hook 'python-mode-hook 'flyspell-prog-mode)
 (setq python-indent-offset 4)
-(add-hook `python-mode-hook `comment-auto-fill)
 ;;; Automatically wrap comment lines
 (add-hook `python-mode-hook `comment-auto-fill)
 ;;; Spell check comments
