@@ -65,6 +65,9 @@
 (require 'reftex)
 (setq reftex-plug-into-AUCTeX t)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+; Note to self RE RefTeX: To insert multiple references at once, mark the
+; entries with 'm'. Then press 'a' to insert all of them as a comma
+; separated list into one reference call.
 
 (defun reftex-format-cref (label def-fmt ref-style)
   (format "\\cref{%s}" label))
