@@ -175,7 +175,7 @@
  '(org-list-empty-line-terminates-plain-lists t)
  '(package-selected-packages
    (quote
-    (fish-mode linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein zenburn-theme smart-tabs-mode magit auctex)))
+    (fish-mode linum-relative markdown-preview-mode markdown-mode color-theme-solarized ein smart-tabs-mode magit auctex)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
