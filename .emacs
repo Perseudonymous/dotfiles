@@ -224,4 +224,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "1ASC" :family "Droid Sans Mono"))))
+ '(linum ((t (:foreground "#93a1a1"))))
  '(linum-relative-current-face ((t (:inherit linum :foreground "#93a1a1" :weight bold)))))
