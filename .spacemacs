@@ -348,6 +348,8 @@ you should place your code here."
   (add-hook 'org-mode-hook 'auto-fill-mode)
   (add-hook 'org-mode-hook 'spacemacs/toggle-line-numbers)
 
+  ; Generally set tabs to 4 spaces
+  (setq-default tab-width 4)
   ; C/C++ options
   (add-hook 'c-mode-common-hook 'comment-auto-fill)
 
