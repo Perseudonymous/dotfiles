@@ -60,7 +60,8 @@ values."
                                     (c++-mode . "k&r")
                                     (other . "gnu")
                                    )
-                             )
+                                   )
+            c-basic-offset 4
      )
      (latex :variables
             latex-enable-auto-fill t
