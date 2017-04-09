@@ -325,6 +325,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
   ; Disable evilification of magit buffers
   (push '("*magit" . emacs) evil-buffer-regexps)
   ;Remap paste key to be able to paste copied text multiple times
@@ -344,8 +345,11 @@ you should place your code here."
 
   ; Magic command to use spacemacs as git editor
   (global-git-commit-mode t)
-  ; Set auto-fill-mode-on in org mode buffers
+
+  ; Org-mode settings
+  ;; Set auto-fill-mode-on in org mode buffers
   (add-hook 'org-mode-hook 'auto-fill-mode)
+  ;; Disable line numbers
   (add-hook 'org-mode-hook 'spacemacs/toggle-line-numbers)
 
   ; Generally set tabs to 4 spaces
@@ -356,6 +360,9 @@ you should place your code here."
 
   ; Python options
   (add-hook `python-mode-hook `comment-auto-fill)
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+  ; LaTeX settings
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   )
 
