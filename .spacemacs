@@ -352,9 +352,11 @@ you should place your code here."
   (setq-default tab-width 4)
   ; C/C++ options
   (add-hook 'c-mode-common-hook 'comment-auto-fill)
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
   ; Python options
   (add-hook `python-mode-hook `comment-auto-fill)
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
