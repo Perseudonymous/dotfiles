@@ -377,6 +377,9 @@ you should place your code here."
           (output-html "xdg-open")
           )
         )
+
+  ; ImageJ code settings
+  (add-to-list 'auto-mode-alist '("\\.ijm\\'" . java-mode))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
