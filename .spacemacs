@@ -356,12 +356,13 @@ you should place your code here."
   ; Generally set tabs to 4 spaces
   (setq-default tab-width 4)
   ; C/C++ options
-  (add-hook 'c-mode-common-hook 'comment-auto-fill)
+  ;(add-hook 'c-mode-common-hook 'comment-auto-fill)
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
   ; Python options
-  (add-hook `python-mode-hook `comment-auto-fill)
+  ;(add-hook `python-mode-hook `comment-auto-fill)
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (add-hook 'python-mode-hook 'auto-fill-mode)
 
   ; LaTeX settings
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
