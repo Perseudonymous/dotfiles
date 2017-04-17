@@ -1,0 +1,17 @@
+# Global gitignore file
+
+# Emacs autosave files
+*~
+
+# C/C++ objects
+*.o
+
+# PDFs
+*.pdf
+
+# LaTeX
+*.aux
+*.log
+
+# AUCTeX auto
+*.el
