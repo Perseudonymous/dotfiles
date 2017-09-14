@@ -81,7 +81,8 @@ backend      : TkAgg
 #lines.linewidth   : 1.5     # line width in points
 lines.linestyle   : None       # solid line
 #lines.color       : C0      # has no affect on plot(); see axes.prop_cycle
-lines.marker      : cycler('marker', ['o', 'v', 's', 'd', 'p', '*', 'h'])    # the default marker
+lines.marker      : o    # the default marker
+#lines.marker      : cycler('marker', ['o', 'v', 's', 'd', 'p', '*', 'h'])    # the default marker
 #lines.markeredgewidth  : 1.0     # the line width around the marker symbol
 #lines.markersize  : 6            # markersize, in points
 #lines.dash_joinstyle : miter        # miter|round|bevel
