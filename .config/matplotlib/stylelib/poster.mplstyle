@@ -1,14 +1,20 @@
-axes.titlesize : 18
-axes.labelsize : 18
-lines.linewidth : 3
+axes.labelsize : 17.6
+axes.titlesize : 20
 xtick.labelsize : 16
 ytick.labelsize : 16
 legend.fontsize : 16
-lines.markersize : 10
+
 grid.linewidth : 1.6
-lines.markeredgewidth : 4
+lines.linewidth : 2.8
+patch.linewidth : 0.48
+lines.markersize : 11.2
+lines.markeredgewidth : 3
+markers.fillstyle : none
 
 xtick.major.width: 1.6
 ytick.major.width: 1.6
 xtick.minor.width: 0.8
 ytick.minor.width: 0.8
+
+xtick.major.pad: 11.2
+ytick.major.pad: 11.2
