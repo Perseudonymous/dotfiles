@@ -379,8 +379,8 @@ you should place your code here."
 
   ; Python options
   ;(add-hook `python-mode-hook `comment-auto-fill)
-  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   (add-hook 'python-mode-hook 'auto-fill-mode)
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
   ; LaTeX settings
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
