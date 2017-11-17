@@ -97,7 +97,7 @@ lines.marker      : o    # the default marker
 #lines.dotted_pattern : 1.1, 1.1
 #lines.scale_dashes : True
 
-#markers.fillstyle: full # full|left|right|bottom|top|none
+markers.fillstyle: none # full|left|right|bottom|top|none
 
 ### PATCHES
 # Patches are graphical objects that fill 2D space, like polygons or
