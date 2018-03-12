@@ -461,7 +461,7 @@ axes.prop_cycle    : cycler('color', ['006ba4', 'ff800e', 'ababab', '595959', '5
 ### IMAGES
 #image.aspect : equal             # equal | auto | a number
 #image.interpolation  : nearest   # see help(imshow) for options
-#image.cmap   : viridis           # A colormap name, gray etc...
+image.cmap   : cividis           # A colormap name, gray etc...
 #image.lut    : 256               # the size of the colormap lookup table
 #image.origin : upper             # lower | upper
 #image.resample  : True
