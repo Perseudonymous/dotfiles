@@ -10,6 +10,7 @@ patch.linewidth : 0.48
 lines.markersize : 11.2
 lines.markeredgewidth : 3
 markers.fillstyle : none
+errorbar.capsize : 4
 
 xtick.major.width: 1.6
 ytick.major.width: 1.6
