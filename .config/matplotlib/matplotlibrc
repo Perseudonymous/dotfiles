@@ -35,6 +35,7 @@
 # You can also deploy your own backend outside of matplotlib by
 # referring to the module name (which must be in the PYTHONPATH) as
 # 'module://my_backend'.
+# qt5agg works for gui on work machine
 # backend      : PDF
 
 # If you are using the Qt4Agg backend, you can choose here
@@ -82,6 +83,7 @@
 lines.linestyle   : None       # solid line
 #lines.color       : C0      # has no affect on plot(); see axes.prop_cycle
 lines.marker      : o    # the default marker
+# Cannot set a cycler here. Can set it for the axis options.
 #lines.marker      : cycler('marker', ['o', 'v', 's', 'd', 'p', '*', 'h'])    # the default marker
 #lines.markeredgewidth  : 1.0     # the line width around the marker symbol
 #lines.markersize  : 6            # markersize, in points
@@ -336,7 +338,7 @@ markers.fillstyle: none # full|left|right|bottom|top|none
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
 # Use a colour-blind friendly colour cycle.
-axes.prop_cycle    : cycler('color', ['006ba4', 'ff800e', 'ababab', '595959', '5f9ed1', 'c85200', '898989', 'a2c8ec', 'ffbc79', 'cfcfcf'])
+axes.prop_cycle    : cycler('color', ['006ba4', 'ff800e', 'ababab', '595959', '5f9ed1', 'c85200', '898989', 'a2c8ec', 'ffbc79', 'cfcfcf']) + cycler('marker', ['o', 'v', 's', 'd', 'p', '*', 'h', '<', '>', '^'])
 
                                             # color cycle for plot lines
                                             # as list of string colorspecs:
