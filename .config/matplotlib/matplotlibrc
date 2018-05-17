@@ -128,10 +128,10 @@ markers.fillstyle: none # full|left|right|bottom|top|none
 #boxplot.showfliers  : True
 #boxplot.meanline    : False
 
-#boxplot.flierprops.color           : 'k'
-#boxplot.flierprops.marker          : 'o'
-#boxplot.flierprops.markerfacecolor : 'none'
-#boxplot.flierprops.markeredgecolor : 'k'
+boxplot.flierprops.color           : 'C0'
+boxplot.flierprops.marker          : 'o'
+boxplot.flierprops.markerfacecolor : 'none'
+boxplot.flierprops.markeredgecolor : 'C0'
 #boxplot.flierprops.markersize      : 6
 #boxplot.flierprops.linestyle       : 'none'
 #boxplot.flierprops.linewidth       : 1.0
@@ -139,18 +139,22 @@ markers.fillstyle: none # full|left|right|bottom|top|none
 #boxplot.boxprops.color     : 'k'
 #boxplot.boxprops.linewidth : 1.0
 #boxplot.boxprops.linestyle : '-'
+boxplot.boxprops.marker : 'None
 
 #boxplot.whiskerprops.color     : 'k'
 #boxplot.whiskerprops.linewidth : 1.0
 #boxplot.whiskerprops.linestyle : '-'
+boxplot.whiskerprops.marker : 'None
 
 #boxplot.capprops.color     : 'k'
 #boxplot.capprops.linewidth : 1.0
 #boxplot.capprops.linestyle : '-'
+boxplot.capprops.marker : 'None
 
 #boxplot.medianprops.color     : 'C1'
 #boxplot.medianprops.linewidth : 1.0
 #boxplot.medianprops.linestyle : '-'
+boxplot.medianprops.marker : 'None
 
 #boxplot.meanprops.color           : 'C2'
 #boxplot.meanprops.marker          : '^'
