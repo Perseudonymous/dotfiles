@@ -129,7 +129,7 @@ markers.fillstyle: none # full|left|right|bottom|top|none
 #boxplot.meanline    : False
 
 boxplot.flierprops.color           : C0
-boxplot.flierprops.marker          : 'o'
+boxplot.flierprops.marker          : o
 boxplot.flierprops.markerfacecolor : None
 boxplot.flierprops.markeredgecolor : C0
 #boxplot.flierprops.markersize      : 6

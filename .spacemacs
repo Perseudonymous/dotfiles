@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     auto-completion
      vimscript
      javascript
      html
@@ -395,6 +396,8 @@ you should place your code here."
   ;(add-hook `python-mode-hook `comment-auto-fill)
   (add-hook 'python-mode-hook 'auto-fill-mode)
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (eval-after-load "company"
+    '(add-to-list 'company-backends 'company-anaconda))
 
   ; LaTeX settings
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
