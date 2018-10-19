@@ -27,3 +27,6 @@ set relativenumber
 
 inoremap fd <Esc>
 
+if &diff
+	colorscheme solarized
+endif
