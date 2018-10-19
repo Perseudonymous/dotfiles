@@ -17,3 +17,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle nojhan/liquidprompt
 
 antigen apply
+
+if [ -e "$HOME/.zshlocal" ]; then
+    source ~/.zshlocal
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
