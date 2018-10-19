@@ -31,6 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     auto-completion
+     vimscript
      javascript
      html
      csv
@@ -69,7 +71,20 @@ values."
             latex-enable-auto-fill t
             ;latex-build-command "LaTeX"
             reftex-ref-style-default-list (quote ("Default" "Cleveref"))
-            )
+            reftex-bibliography-commands '("bibliography" "addbibresource")
+            TeX-auto-save t
+            TeX-parse-self t
+            TeX-master nil
+            ;reftex-cite-format '((?\C-m . "~\\cite{%l}")
+                                        ;                     (?t    . "\\cite{%l}"))
+            reftex-format-cite-function
+            '(lambda (key fmt)
+               (let ((cite (replace-regexp-in-string "%l" key fmt)))
+                 (if (or (= ?~ (string-to-char fmt))
+                         (member (preceding-char) '(?\ ?\t ?\n ?~)))
+                     cite
+                   (concat "~" cite))))
+     )
      bibtex
      python
      extra-langs
@@ -379,8 +394,10 @@ you should place your code here."
 
   ; Python options
   ;(add-hook `python-mode-hook `comment-auto-fill)
-  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   (add-hook 'python-mode-hook 'auto-fill-mode)
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (eval-after-load "company"
+    '(add-to-list 'company-backends 'company-anaconda))
 
   ; LaTeX settings
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
@@ -420,7 +437,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (dash-functional web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode org-ref pdf-tools key-chord ivy tablist helm-bibtex parsebib biblio biblio-core winum platformio-mode wolfram-mode thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode auctex-latexmk csv-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode insert-shebang hy-mode helm-pydoc fish-mode disaster cython-mode cmake-mode clang-format auctex anaconda-mode pythonic smeargle orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor auto-dictionary ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (vimrc-mode dactyl-mode org-category-capture dash-functional web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode org-ref pdf-tools key-chord ivy tablist helm-bibtex parsebib biblio biblio-core winum platformio-mode wolfram-mode thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode auctex-latexmk csv-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode insert-shebang hy-mode helm-pydoc fish-mode disaster cython-mode cmake-mode clang-format auctex anaconda-mode pythonic smeargle orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor auto-dictionary ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(safe-local-variable-values (quote ((TeX-auto-save . t) (TeX-parse-self . t))))
  '(setq spacemacs-theme-org-agenda-height)
  '(spacemacs-theme-org-agenda-height nil)

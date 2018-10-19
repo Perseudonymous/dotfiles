@@ -45,6 +45,9 @@ floating_modifier $mod
 for_window [class="fiji-Main"] floating enable
 for_window [class="ij-ImageJ"] floating enable
 
+# Make root windows float by default
+for_window [class="ROOT"] floating enable
+
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 # Bind xfce4-terminal for the moment, as I need to configure xterm if
