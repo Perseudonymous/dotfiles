@@ -1,0 +1,127 @@
+! Solarizededed
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base02
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_red
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_green
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_yellow
+
+!! blue dark/light
+!*color4:                S_blue
+!*color12:               S_blue
+*color4:                S_base0
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_magenta
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_cyan
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base2
+URxvt.intensityStyles:  false
+
+! do not scroll with output
+URxvt.scrollTtyOutput:  false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt.scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt.scrollTtyKeypress: true
+
+! turn off scrollbar
+URxvt.scrollBar: false
+
+! do not scroll in the secondary screen (as used by e.g. less)
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
+! needs a patch to actually work
+URxvt.secondaryWheel: 1
+
+URxvt.saveLines: 8192
+URxvt.urgentOnBell: true
+
+! monospace should always be installed (and probably linked to a font I like)
+!URxvt.font: -*-dina-medium-r-normal-*-10-*-*-*-*-*-*-*
+URxvt.font: xft:Inconsolata:size=11
+URxvt.boldFont: xft:Inconsolata:bold:size=11
+
+! Alternative fonts...
+/* URxvt.font: xft:Gohu Gohufont */
+/* URxvt.font: xft:monospace:size=9 */
+
+! Sometimes useful values.
+!/* URxvt.allow_bold: false */
+!/* URxvt.letterSpace: -1 */
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+
+! enable transparency
+!URxvt*background: #000000
+!/* URxvt*foreground: #cccccc */
+!URxvt.transparent: true
+!URxvt.shading: 20
+
+! urxvt doesn't use the xterm ctrl+left escape, but tput won't tell applications what the correct binds are, because kLFT5 is non-standard, or something?
+! Anyway, this forces urxvt to use the xterm escapes.
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+! xterm defaults are whack.
+!xterm.termName: xterm-256color
+!xterm.vt100.metaSendsEscape: true
+!xterm.saveLines: 8192
+!xterm.vt100.bellIsUrgent: true
+
+! xterm fonts
+!xterm*font: -*-dina-medium-r-normal-*-10-*-*-*-*-*-*-*
+!xterm*renderFont: false
+!xterm.vt100.faceName: monospace
+!xterm.vt100.faceSize: 10
+!xterm.vt100.scrollBar: false
