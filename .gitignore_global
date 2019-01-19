@@ -15,3 +15,6 @@
 
 # AUCTeX auto
 *.el
+
+# Python caches
+*pyc
