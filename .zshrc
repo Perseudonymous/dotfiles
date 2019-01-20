@@ -18,6 +18,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 antigen bundle nojhan/liquidprompt
 
+antigen bundle ssh-agent
+
 antigen apply
 
 if [ -e "$HOME/.zshlocal" ]; then
