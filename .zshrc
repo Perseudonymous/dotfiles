@@ -16,9 +16,11 @@ antigen bundle zdharma/fast-syntax-highlighting
 
 antigen bundle zsh-users/zsh-autosuggestions
 
-antigen bundle nojhan/liquidprompt
+#antigen bundle nojhan/liquidprompt
 
+antigen theme denysdovhan/spaceship-prompt
 antigen apply
+
 
 if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
