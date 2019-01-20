@@ -83,7 +83,14 @@ URxvt.urgentOnBell: true
 ! monospace should always be installed (and probably linked to a font I like)
 !URxvt.font: -*-dina-medium-r-normal-*-10-*-*-*-*-*-*-*
 URxvt.font: xft:Inconsolata:size=11
+!URxvt.font: xft:Source Code Pro for Powerline,Source Code Pro Medium:style=Medium:size=10
+!URxvt.font: xft:Inconsolata for Powerline:style=Medium:size=10
+!URxvt*font: xft:DejaVu Sans Mono for Powerline:style=Medium:size=11
+
 URxvt.boldFont: xft:Inconsolata:bold:size=11
+!URxvt.boldFont: xft:Inconsolata Bold for Powerline:size=11
+
+!URxvt.letterSpace: 0
 
 ! Alternative fonts...
 /* URxvt.font: xft:Gohu Gohufont */
