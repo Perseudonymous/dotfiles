@@ -22,6 +22,8 @@ antigen theme denysdovhan/spaceship-prompt
 
 antigen apply
 
+SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_EXIT_CODE_SYMBOL=''
 
 if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
