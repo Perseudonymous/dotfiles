@@ -24,4 +24,9 @@ if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+elif [ -f /usr/share/fzf/key-bindings.zsh ]; then
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+fi
