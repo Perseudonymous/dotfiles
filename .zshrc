@@ -19,6 +19,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 #antigen bundle nojhan/liquidprompt
 
 antigen theme denysdovhan/spaceship-prompt
+
 antigen apply
 
 SPACESHIP_EXIT_CODE_SHOW=true
@@ -28,4 +29,9 @@ if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+elif [ -f /usr/share/fzf/key-bindings.zsh ]; then
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+fi

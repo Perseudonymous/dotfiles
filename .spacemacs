@@ -413,7 +413,7 @@ you should place your code here."
           )
         )
 
-  ; ImageJ code settings
+    ; ImageJ code settings
   (add-to-list 'auto-mode-alist '("\\.ijm\\'" . java-mode))
 
   ; Arduino setting, in the absence of a layer for PlatformIO
