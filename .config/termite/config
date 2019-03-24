@@ -73,7 +73,7 @@ scrollback_lines = 10000
 # color14 = #93e0e3
 # color15 = #ffffff
 
-# # Use solarized colors
+# Use solarized colors
 # foreground = #839496
 # foreground_bold = #eee8d5
 # #foreground_dim = #888888
