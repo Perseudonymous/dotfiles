@@ -24,7 +24,7 @@ antigen apply
 
 SPACESHIP_EXIT_CODE_SHOW=true
 SPACESHIP_EXIT_CODE_SYMBOL=''
-SPACESHIP_VENV_SYMBOL=🐍·
+SPACESHIP_VENV_SYMBOL='🐍 '
 
 if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
