@@ -30,6 +30,8 @@ if [ -e "$HOME/.zshlocal" ]; then
     source ~/.zshlocal
 fi
 
+eval $(dircolors -b ~/.dir_colors)
+
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
 elif [ -f /usr/share/fzf/key-bindings.zsh ]; then
