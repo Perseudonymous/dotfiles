@@ -31,6 +31,7 @@ if [ -e "$HOME/.zshlocal" ]; then
 fi
 
 eval $(dircolors -b ~/.dir_colors)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
