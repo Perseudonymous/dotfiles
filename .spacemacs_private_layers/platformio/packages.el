@@ -2,8 +2,8 @@
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Author: Emlyn <ejp@tinker>
-;; URL: https://github.com/syl20bnr/spacemacs
+;; Author: Emlyn Price
+;; URL (for spacemacs): https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
