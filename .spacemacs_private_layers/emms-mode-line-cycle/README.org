@@ -1,0 +1,17 @@
+#+TITLE: emms-mode-line-cycle layer
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+
+* Description
+A very simple layer to use [[https://github.com/momomo5717/emms-mode-line-cycle][emms-mode-line-cycle]] with spacemacs. Any improvements
+are welcome!
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =emms-mode-line-cycle= to the existing =dotspacemacs-configuration-layers=
+list in this file. Also, the layer needs to be wherever you store your private
+layers.
+
