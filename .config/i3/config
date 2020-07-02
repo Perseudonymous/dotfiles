@@ -30,7 +30,7 @@ font pango:Droid Sans Mono 8
 #exec_always --no-startup-id nm_applet
 #exec --no-startup-id setxkbmap -layout gb -option ctrl:nocaps
 exec /usr/bin/dropbox
-exec --no-startup-id emacs --daemon
+#exec --no-startup-id emacs --daemon
 hide_edge_borders vertical
 #exec xinput -disable 10
 #exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
