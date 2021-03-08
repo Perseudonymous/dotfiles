@@ -102,6 +102,11 @@ This function should only modify configuration layer settings."
             )
      (emms-mode-line-cycle :variables
                            emms-mode-line-cycle-velocity 3)
+     json
+     markdown
+     pdf
+     docker
+     systemd
      )
 
 
