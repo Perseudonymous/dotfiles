@@ -132,3 +132,5 @@ URxvt.keysym.Control-Right: \033[1;5C
 !xterm.vt100.faceName: monospace
 !xterm.vt100.faceSize: 10
 !xterm.vt100.scrollBar: false
+
+#include ".Xresources.local"
