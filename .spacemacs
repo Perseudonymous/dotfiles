@@ -99,6 +99,7 @@ This function should only modify configuration layer settings."
      ;epub
      (media :variables
             emms-source-file-default-directory "/media/enki_music/enki_music/"
+            emms-player-list '(emms-player-mpv)
             )
      (emms-mode-line-cycle :variables
                            emms-mode-line-cycle-velocity 3)
@@ -646,7 +647,6 @@ you should place your code here."
           "pdflatex -interaction nonstopmode -output-directory %o %f"))
   (emms-mode-line-enable)
   (emms-mode-line-cycle)
-  (setq emms-player-list '(emms-player-mpv))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
