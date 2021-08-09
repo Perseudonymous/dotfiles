@@ -96,7 +96,7 @@ This function should only modify configuration layer settings."
      python
      platformio
      docker
-     epub
+     ;epub
      (media :variables
             emms-source-file-default-directory "/media/enki_music/enki_music/"
             emms-player-list '(emms-player-mpv)
