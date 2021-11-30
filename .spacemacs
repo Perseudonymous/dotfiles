@@ -600,7 +600,7 @@ you should place your code here."
   (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 
   ; Magic command to use spacemacs as git editor
-  (global-git-commit-mode t)
+  ;(global-git-commit-mode t)
 
   ; Org-mode settings
   ;; Set auto-fill-mode-on in org mode buffers
