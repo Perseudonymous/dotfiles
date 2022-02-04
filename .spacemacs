@@ -125,8 +125,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '((org-bullets)
-                                    (exec-path-from-shell)
+   dotspacemacs-excluded-packages '(org-bullets
+                                    exec-path-from-shell
                                     )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
