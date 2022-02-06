@@ -104,7 +104,6 @@ This function should only modify configuration layer settings."
      (emms-mode-line-cycle :variables
                            emms-mode-line-cycle-velocity 3)
      json
-     markdown
      pdf
      docker
      systemd
@@ -639,8 +638,7 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.ijm\\'" . java-mode))
 
   ; Arduino setting, in the absence of a layer for PlatformIO
-  (add-to-list 'auto-mode-alist '("\\.ino\\" . arduino-mode))
-  (add-to-list 'auto-mode-alist '("\\.ino" . arduino-mode))
+  (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
   (add-hook 'arduino-mode-hook 'platformio-mode)
 
   (setq org-latex-pdf-process
