@@ -104,7 +104,6 @@ This function should only modify configuration layer settings."
      (emms-mode-line-cycle :variables
                            emms-mode-line-cycle-velocity 3)
      json
-     markdown
      pdf
      docker
      systemd
@@ -120,7 +119,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(keychain-environment)
+   dotspacemacs-additional-packages '(keychain-environment platformio-mode)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -639,8 +638,7 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.ijm\\'" . java-mode))
 
   ; Arduino setting, in the absence of a layer for PlatformIO
-  (add-to-list 'auto-mode-alist '("\\.ino\\" . arduino-mode))
-  (add-to-list 'auto-mode-alist '("\\.ino" . arduino-mode))
+  (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
   (add-hook 'arduino-mode-hook 'platformio-mode)
 
   (setq org-latex-pdf-process
