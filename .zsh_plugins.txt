@@ -1,0 +1,16 @@
+# Completions
+mattmc3/ez-compinit
+zsh-users/zsh-completions
+aloxaf/fzf-tab
+
+# History
+mattmc3/zephyr path:plugins/history
+
+# Keybindings
+mattmc3/zephyr path:plugins/editor
+
+mattmc3/zephyr path:plugins/completion
+
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search

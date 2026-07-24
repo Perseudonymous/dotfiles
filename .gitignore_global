@@ -18,3 +18,15 @@
 
 # Python caches
 *pyc
+__pycache__/
+
+# Other python stuff
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info
